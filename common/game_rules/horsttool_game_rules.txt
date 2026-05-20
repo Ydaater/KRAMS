@@ -1,0 +1,146 @@
+horst_host_country = {
+	name = "1host"
+	group = "host_tool"
+	icon = "GFX_volunteers"	
+	option = {
+		name = AST
+		text = "Australasia"
+		desc = ""
+	}
+
+	option = {
+		name = AUS
+		text = "Austria"
+		desc = ""
+	}
+
+	option = {
+		name = BRA
+		text = "Brazil"
+		desc = ""
+	}
+
+	option = {
+		name = GEA
+		text = "German East Asia"
+		desc = ""
+	}
+
+	option = {
+		name = RAJ
+		text = "Dominion of India"
+		desc = ""
+	}
+	option = {
+		name = UKR
+		text = "Ukraine"
+		desc = ""
+	}
+
+	option = {
+		name = CAN
+		text = "Dominion of Canada"
+		desc = ""
+	}
+
+	option = {
+		name = FRA
+		text = "Commune of France"
+		desc = ""
+	}
+
+	option = {
+		name = GER
+		text = "Germany"
+		desc = ""
+	}
+
+	option = {
+		name = IRE
+		text = "Ireland"
+		desc = ""
+	}
+	option = {
+		name = SRI
+		text = "Socialist Republic of Italy"
+		desc = ""
+	}
+
+	option = {
+		name = JAP
+		text = "Japan"
+		desc = ""
+	}
+
+	option = {
+		name = FNG
+		text = "Fengtian Government"
+		desc = ""
+	}
+	option = {
+		name = MEX
+		text = "Mexico"
+		desc = ""
+	}
+
+	option = {
+		name = NOR
+		text = "Norway"
+		desc = ""
+	}
+
+	option = {
+		name = POL
+		text = "Poland"
+		desc = ""
+	}
+
+	option = {
+		name = SIA
+		text = "Siam"
+		desc = ""
+	}
+
+	option = {
+		name = RUS
+		text = "Russian Republic"
+		desc = ""
+	}
+
+	option = {
+		name = SWF
+		text = "Socalist Spain (Not Recommended)"
+		desc = ""
+	}
+
+	option = {
+		name = SWE
+		text = "Sweden"
+		desc = ""
+	}
+
+	option = {
+		name = SWI
+		text = "Switzerland"
+		desc = ""
+	}
+
+	option = {
+		name = TUR
+		text = "Ottoman Empire"
+		desc = ""
+	}
+
+	option = {
+		name = ENG
+		text = "Union of Britain"
+		desc = ""
+	}
+
+
+	option = {
+		name = USA
+		text = "United States"
+		desc = ""
+	}
+}
