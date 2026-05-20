@@ -1,0 +1,557 @@
+FRA_internationale_category = {
+	FRA_Integratet_ENG = {
+		icon = generic_break_treaty
+		allowed = { tag = FRA }
+		visible = {
+			ENG = { is_ai = yes }
+		}
+		available = {
+			ENG = { is_ai = yes }
+			date > 1936.1.5			
+		}
+		#cost = 100
+		fire_only_once = yes
+
+		fire_only_once = yes
+		complete_effect = {
+			FRA = {
+				add_ideas = FRA_vanguard_of_the_revolution_idea2
+				add_research_slot = 2
+				set_autonomy = {
+					target = ENG
+					autonomy_state = auto2
+				}
+				if = {
+					limit = {
+						controls_province = 3552 #Brest
+						983 = { #Brittany
+							is_owned_and_controlled_by = ROOT
+						can_construct_building = naval_facility
+						}
+					}
+					983 = { #Brittany
+						custom_override_tooltip = {
+							add_building_construction = {
+								type = naval_facility
+								level = 1
+								province = 3552 #Brest
+								instant_build = yes
+							}
+							tooltip = {
+								localization_key = tooltip_add_building_on_victory_point
+								BUILDING = naval_facility
+								NUMBER = 1
+								VP = 3552
+							}
+						}
+					}
+				}
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+						
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+			}
+			ENG = {
+				127 = {
+					remove_building = { type = dockyard level = 2 }
+				}
+				126 = {
+					remove_building = { type = dockyard level = 1 }
+				}
+				132 = {
+					remove_building = { type = dockyard level = 4 }
+				}
+				131 = {
+					remove_building = { type = dockyard level = 5 }
+				}
+				133 = {
+					remove_building = { type = dockyard level = 4 }
+				}
+				121 = {
+					remove_building = { type = dockyard level = 1 }
+				}
+				136 = {
+					remove_building = { type = dockyard level = 2 }
+				}
+				every_core_state = {
+					add_core_of = FRA
+				}
+				add_core_of = FRA
+				every_navy_leader = {
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					set_nationality = FRA
+				}
+				#every_army_leader = { 
+				#		demote_to_general = yes
+				#		remove_all_country_leader_roles = yes #not needed in GER
+				#		remove_civilian_advisor_roles = yes #not needed in GER
+				##		#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+				#	set_nationality = FRA
+				#}
+				#every_air_leader = { 
+				#		demote_to_general = yes
+				#		remove_all_country_leader_roles = yes #not needed in GER
+				##		remove_civilian_advisor_roles = yes #not needed in GER
+				#		#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+				#	set_nationality = FRA
+				#}
+				transfer_navy = { target = FRA }
+				119 = {
+					remove_building = { type = dockyard level = 2 }
+				}
+				transfer_navy = { target = FRA }
+				}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	FRA_Integratet_SPA = {
+		icon = generic_break_treaty
+		allowed = { tag = FRA }
+		visible = {
+			FPA = { is_ai = NO }
+		}
+		available = {
+			D04 = { has_country_flag = SPA_aftermath_of_the_civil_war }
+			OR = {
+				D04 = { is_ai = yes }
+				SPA = { is_ai = yes }
+			}
+			#ENG = { is_ai = yes }
+			#USA = { is_ai = no }
+		}
+		#cost = 100
+		fire_only_once = yes
+
+		fire_only_once = yes
+		complete_effect = {
+			FRA = {
+				add_ideas = FRA_vanguard_of_the_revolution_idea3
+				declare_war_on = {
+					type = annex_everything
+					target = POR
+				}
+				#add_political_power = 100
+				set_autonomy = {
+					target = D04
+					autonomy_state = auto2
+				}
+			}
+			D04 = {
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+					}
+					remove_building = { type = dockyard level = 1 }
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+					}
+					remove_building = { type = dockyard level = 1 }
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+					}
+					remove_building = { type = dockyard level = 1 }
+				}
+				#POR = { add_claim_of_D04_on_valid_cores = yes }
+				complete_national_focus = SWF_united_iberia
+				every_navy_leader = {
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					set_nationality = FRA
+				}
+				every_army_leader = { 
+						demote_to_general = yes
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					set_nationality = FRA
+				}
+				transfer_navy = { target = FRA }
+				}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	FRA_Integratet_IRE = {
+		icon = generic_break_treaty
+		allowed = { tag = FRA }
+		visible = {
+			ENG = { is_ai = yes }
+		}
+		#cost = 100
+		available = {
+			ENG = { is_ai = yes }
+			date > 1936.1.5
+			NOT = { IRE = { is_in_faction_with = FRA }}
+		}
+		
+		#fire_only_once = yes
+
+		#fire_only_once = yes
+		complete_effect = {
+			FRA = {
+				#add_political_power = 100
+				set_autonomy = {
+					target = IRE
+					autonomy_state = auto2
+				}
+			}
+			IRE = {
+				119 = {
+					remove_building = { type = dockyard level = 2 }
+				}
+				transfer_navy = { target = FRA }
+				}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	FRA_Integratet_SRI = {
+		icon = generic_break_treaty
+		allowed = { tag = FRA }
+		visible = {
+			SRI = { is_ai = yes }
+		}
+		available = {
+			USA = { is_ai = no }
+			SRI = { is_ai = yes }
+			SRI = { has_country_flag = SRI_italy_unified_flag }
+		}
+		#cost = 100
+		fire_only_once = yes
+
+		fire_only_once = yes
+		complete_effect = {
+			FRA = {
+				add_ideas = FRA_vanguard_of_the_revolution_idea4
+				#add_political_power = 100
+				set_autonomy = {
+					target = SRI
+					autonomy_state = auto2
+				}
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+			}
+			SRI = {
+				162 = {
+					remove_building = { type = dockyard level = 3 }
+				}
+				838 = {
+					remove_building = { type = dockyard level = 4 }
+				}
+				150 = {
+					remove_building = { type = dockyard level = 1 }
+				}
+				837 = {
+					remove_building = { type = dockyard level = 3 }
+				}
+				117 = {
+					remove_building = { type = dockyard level = 1 }
+				}
+				115 = {
+					remove_building = { type = dockyard level = 1 }
+				}
+				#every_navy_leader = {
+				#		remove_all_country_leader_roles = yes #not needed in GER
+				#		remove_civilian_advisor_roles = yes #not needed in GER
+				#		#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+				##	set_nationality = FRA
+				#}
+				#every_army_leader = { 
+				#		demote_to_general = yes
+				#		remove_all_country_leader_roles = yes #not needed in GER
+				#		remove_civilian_advisor_roles = yes #not needed in GER
+				#		#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+				#	set_nationality = FRA
+				#}
+				transfer_navy = { target = FRA }
+				}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	FRA_Integratet_NOR = {
+		icon = generic_break_treaty
+		allowed = { tag = FRA }
+		visible = {
+			USA = { is_ai = no }
+			ENG = { is_ai = yes }
+		}
+		available = {
+			USA = { is_ai = no }
+			NOR = { is_ai = yes }
+			ENG = { is_ai = yes }
+			NOT = { NOR = { is_in_faction_with = FRA }}
+			date > 1936.1.5
+		}
+		#cost = 100
+		fire_only_once = yes
+
+		fire_only_once = yes
+		complete_effect = {
+			FRA = {
+				#add_political_power = 100
+				set_autonomy = {
+					target = NOR
+					autonomy_state = auto2
+				}
+			}
+			NOR = {
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+					}
+					remove_building = { type = dockyard level = 1 }
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+					}
+					remove_building = { type = dockyard level = 1 }
+				}
+				transfer_navy = { target = FRA }
+				}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	FRA_Integratet_MEX = {
+		icon = generic_break_treaty
+		allowed = { tag = FRA }
+		visible = {
+			USA = { is_ai = no }
+			MEX = { is_ai = yes }
+			ENG = { is_ai = yes }
+		}
+		available = {
+			USA = { is_ai = no }
+			NOT = { MEX = { is_in_faction_with = FRA }}
+			ENG = { is_ai = yes }
+			date > 1936.1.5
+		}
+		#cost = 100
+		fire_only_once = yes
+
+		fire_only_once = yes
+		complete_effect = {
+			FRA = {
+				add_one_random_dockyard = yes
+				#add_political_power = 100
+				set_autonomy = {
+					target = MEX
+					autonomy_state = auto2
+				}
+			}
+			MEX = {
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+					}
+					remove_building = { type = dockyard level = 1 }
+				}
+				transfer_navy = { target = FRA }
+				}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	FRA_Integratet_VVS = {
+		icon = generic_break_treaty
+		allowed = { tag = FRA }
+		visible = {
+			ENG = { is_ai = yes }
+		}
+		available = {
+			ENG = { is_ai = yes }
+			date > 1936.7.1
+		}
+		fire_only_once = yes
+		fire_only_once = yes
+		complete_effect = {
+			#ENG = { 
+				#set_technology = { rubber_processing = 1 popup = yes }
+				#set_technology = { improved_rubber_processing = 1 popup = yes }
+				#set_technology = { advanced_rubber_processing = 1 popup = yes }
+				#complete_national_focus = ENG_synthetic_resources
+			#}
+			FRA = {
+				air_experience = 50
+				complete_national_focus = FRA_ecole_de_lair
+				complete_national_focus = FRA_spirit_of_the_air_division
+				complete_national_focus = FRA_la_lutte_aerienne
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}
+
+foreign_politics = { 
+
+	ENG_Integratet_IRE = {
+		icon = generic_break_treaty
+		allowed = { tag = ENG }
+		visible = {
+			IRE = { is_ai = yes }
+		}
+		available = {
+			IRE = { is_ai = yes }
+			ENG = { is_ai = no }`
+			NOT = { IRE = { is_in_faction_with = FRA }}
+		}
+		#cost = 100
+		#fire_only_once = yes
+
+		#fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				#add_political_power = 100
+				set_autonomy = {
+					target = IRE
+					autonomy_state = auto2
+				}
+			}
+			IRE = {
+				every_navy_leader = {
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					set_nationality = ENG
+				}
+				every_army_leader = { 
+						demote_to_general = yes
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					set_nationality = ENG
+				}
+				transfer_navy = { target = ENG }
+				}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	ENG_Integratet_NOR = {
+		icon = generic_break_treaty
+		allowed = { tag = ENG }
+		visible = {
+			NOR = { is_ai = yes }
+		}
+		available = {
+			USA = { is_ai = no }
+			NOR = { is_ai = yes }
+		}
+		#cost = 100
+		#fire_only_once = yes
+
+		#fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				#add_political_power = 100
+				set_autonomy = {
+					target = NOR
+					autonomy_state = auto2
+				}
+			}
+			NOR = {
+				every_navy_leader = {
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					set_nationality = ENG
+				}
+				every_army_leader = { 
+						demote_to_general = yes
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					set_nationality = ENG
+				}
+				transfer_navy = { target = ENG }
+				}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	ENG_Integratet_MEX = {
+		icon = generic_break_treaty
+		allowed = { tag = ENG }
+		visible = {
+			MEX = { is_ai = yes }
+		}
+		available = {
+			USA = { is_ai = no }
+			MEX = { is_ai = yes }
+		}
+		#cost = 100
+		fire_only_once = yes
+
+		fire_only_once = yes
+		complete_effect = {
+			ENG = {
+				#add_political_power = 100
+				set_autonomy = {
+					target = MEX
+					autonomy_state = auto2
+				}
+			}
+			MEX = {
+				every_navy_leader = {
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					set_nationality = ENG
+				}
+				every_army_leader = { 
+						demote_to_general = yes
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					set_nationality = ENG
+				}
+				transfer_navy = { target = ENG }
+				}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	
+	
+}
+
