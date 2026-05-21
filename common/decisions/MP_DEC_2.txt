@@ -1,0 +1,306 @@
+operations = {
+	GEA_take_east_asian_navy = {
+		icon = generic_naval
+
+		allowed = { tag = GER }
+
+		available = {
+			OR = {
+				ENG = {
+					naval_strength_ratio = {
+					    tag = GER
+					    ratio > 2
+					}
+				}
+				GEA = { has_capitulated = yes }
+				NOT = { is_ally_with = GEA }
+			}
+			#has_war = yes
+			#OR = {
+			#	date > 1938.1.1
+			#	GEA = { has_capitulated = yes }
+			#	NOT = { is_ally_with = GEA }
+			#}
+		}
+		targets = { GEA }
+
+		visible = {
+			country_exists = GEA
+			NOT = { has_country_flag = GER_recalled_GEA_navy }
+			has_capitulated = no
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				GEA = { is_ai = no }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete GEA_take_east_asian_navy"
+			GER = {
+				set_temp_variable = { GEA_dockyards = 0 }
+				every_controlled_state = {
+					limit = { has_dynamic_modifier = { modifier = GER_east_asian_naval_yards } }
+					remove_dynamic_modifier = { modifier = GER_east_asian_naval_yards }
+					add_to_temp_variable = { GEA_dockyards = GER_east_asian_slots }
+
+					set_temp_variable = { state_dockyards = GER_east_asian_slots }
+					multiply_temp_variable = { state_dockyards = -1 }
+					if = {
+						limit = { check_variable = { state_dockyards > 0 } }
+						add_building_construction = { type = dockyard level = state_dockyards }
+					}
+				}
+			}
+			hidden_effect = {
+				every_state = { clear_variable = GER_east_asian_slots } #remove from non-controlled states
+			}
+			GEA = {
+				hidden_effect = {
+					if = {
+						limit = { NOT = { check_variable = { GEA_dockyards = 0 } } }
+						add_offsite_building = { type = dockyard level = GEA_dockyards }
+					}
+				}
+				every_navy_leader = {
+					limit = { NOT = { is_character = GEA_rudolph_firle } }
+					hidden_effect = {
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					}
+					set_nationality = ROOT
+				}
+				transfer_navy = { target = ROOT }
+				if = {
+					limit = { has_character = GEA_alexander_von_falkenhausen }
+					GEA_alexander_von_falkenhausen = {
+						remove_all_country_leader_roles = yes
+						add_country_leader_role = {
+							country_leader = { ideology = authoritarian_democrat_subtype }
+							promote_leader = yes
+						}
+						add_country_leader_role = {
+							country_leader = { ideology = paternal_autocrat_subtype }
+							promote_leader = yes
+						}
+					}
+				}
+				else_if = {
+					limit = { has_character = GEA_herman_ehrhardt }
+					GEA_herman_ehrhardt = {
+						remove_all_country_leader_roles = yes
+						add_country_leader_role = {
+							country_leader = { ideology = authoritarian_democrat_subtype }
+							promote_leader = yes
+						}
+						add_country_leader_role = {
+							country_leader = { ideology = paternal_autocrat_subtype }
+							promote_leader = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	GEA_take_german_navy = {
+		icon = generic_naval
+
+		allowed = { tag = GEA }
+
+		available = {
+			has_country_leader = { character = GEA_hellmuth_von_muecke }
+			OR = {
+				JAP = {
+					naval_strength_ratio = {
+					    tag = ROOT
+					    ratio > 2
+					}
+				}
+				AND = {
+					has_completed_focus = GEA_expand_naval_facilities
+					has_completed_focus = GEA_new_admiralty
+				}
+			}
+		}
+
+		visible = {
+			country_exists = GER
+			has_capitulated = no
+		}
+		targets = { GER }
+
+		custom_cost_text = CP_50_PP_50
+		custom_cost_trigger = {
+			NOT = { command_power < 50 }
+			has_political_power > 50
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 0
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -50
+			}
+			GER = {
+				country_event = krw.73
+				effect_tooltip = {
+					every_navy_leader = {
+						limit = { 
+							OR = {
+								NOT = { is_character = GER_max_bastian } 
+								NOT = { is_character = GER_willy_von_nordeck } 
+								NOT = { is_character = GER_hermann_boehm } 
+							}
+						}
+						hidden_effect = {
+							remove_all_country_leader_roles = yes 
+							remove_civilian_advisor_roles = yes
+						}
+						set_nationality = ROOT
+					}
+					transfer_navy = { target = ROOT }
+					custom_effect_tooltip = needs_approval
+					custom_effect_tooltip = if_they_refuse_tt
+					add_command_power = 50
+					add_political_power = 50
+				}
+			}
+		}
+	}
+	GER_give_GEA_ceylon = {
+		icon = rubber
+		highlight_states = {
+			highlight_state_targets = { state = 422 }
+		}
+		allowed = { tag = GER }
+		visible = {
+			GER = { owns_state = 422 }
+			country_exists = GEA
+			has_capitulated = no
+		}
+		available = {
+			has_full_control_of_state = 422
+			has_full_control_of_state = 1119
+		}
+		targets = { GEA }
+		fire_only_once = yes
+		complete_effect = {
+			422 = {
+				transfer_state_to = GEA
+				hidden_effect = { 
+					set_compliance = 70 
+					add_claim_by = GEA
+				}
+			}
+			1119 = {
+				transfer_state_to = GEA
+				hidden_effect = { 
+					set_compliance = 70 
+					add_claim_by = GEA
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+	GER_annex_GEA = {
+		icon = generic_break_treaty
+		allowed = { tag = GER }
+		visible = {
+			GEA = { is_ai = yes }
+			country_exists = GEA
+			has_capitulated = no
+		}
+		available = {
+			INC = {
+				OR = {
+					exists = no
+					NOT = { has_war_with = GEA}
+				}
+			}
+		}
+		custom_cost_text = CP_50
+		custom_cost_trigger = {
+			NOT = { command_power < 49 }
+		}
+		targets = { GEA }
+		fire_only_once = yes
+
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+				set_temp_variable = { GEA_dockyards = 0 }
+				every_controlled_state = {
+					limit = { has_dynamic_modifier = { modifier = GER_east_asian_naval_yards } }
+					remove_dynamic_modifier = { modifier = GER_east_asian_naval_yards }
+					add_to_temp_variable = { GEA_dockyards = GER_east_asian_slots }
+
+					set_temp_variable = { state_dockyards = GER_east_asian_slots }
+					multiply_temp_variable = { state_dockyards = -1 }
+					if = {
+						limit = { check_variable = { state_dockyards > 0 } }
+						add_building_construction = { type = dockyard level = state_dockyards }
+					}
+				}
+			}
+			#hidden_effect = {
+				add_command_power = -50
+				every_state = { 
+					clear_variable = GER_east_asian_slots 
+				} #remove from non-controlled states
+				every_state = {
+					limit = { 
+						is_claimed_by = GEA
+					}
+					add_claim_by = GER
+					set_compliance = 70 
+				}
+			#}
+			GEA = {
+				add_offsite_building = { type = dockyard level = GEA_dockyards }
+				every_navy_leader = {
+					limit = { NOT = { is_character = GEA_rudolph_firle } }
+					hidden_effect = {
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					}
+					set_nationality = ROOT
+				}
+				every_army_leader = { 
+					hidden_effect = {
+						demote_to_general = yes
+						remove_all_country_leader_roles = yes #not needed in GER
+						remove_civilian_advisor_roles = yes #not needed in GER
+						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+					}
+					set_nationality = ROOT
+				}
+				transfer_navy = { target = ROOT }
+			}
+			annex_country = {
+			    target = GEA
+			    transfer_troops = yes
+			}
+			336 = {
+				set_compliance = 70 
+				add_dynamic_modifier = {
+				    modifier = colonial_headquarters
+				}
+			}
+			
+		}
+		ai_will_do = { factor = 0 }
+	}
+}
+

@@ -554,16 +554,3 @@ foreign_politics = {
 	
 	
 }
-
-
-#annex_country = {
-			   # target = GEA
-			   # transfer_troops = yes
-			#}
-			#336 = {
-				#set_compliance = 70 
-				#add_dynamic_modifier = {
-				#    modifier = colonial_headquarters
-				#}
-			#}
-
