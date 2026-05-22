@@ -15,6 +15,7 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.0				-- Max ammount of special for
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 96 -- Vanilla is 24
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 -- 12 -- 20 	--Base cost to unlock a regiment slot,
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0 -- 3 -- 5	--Base cost to change a regiment column.
+NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1.0
 
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0;
