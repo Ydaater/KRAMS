@@ -72,9 +72,13 @@ CRO_taz_organisation = {
 		OR = {
 			is_danubian_tag = yes
 			original_tag = SER
+			original_tag = BUL
 		}
 	}
 	available = {
-		FROM = { owns_state = 109 } #Central Croatia
+		OR = { 
+			FROM = { owns_state = 109 } #Central Croatia
+			FROM = { owns_state = 48 } #Sofia
+		}
 	}
 }

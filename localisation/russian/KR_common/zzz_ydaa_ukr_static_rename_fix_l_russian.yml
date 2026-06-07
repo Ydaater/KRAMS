@@ -1,0 +1,18 @@
+﻿l_russian:
+ # Статические override-ключи для украинского rename_state_effect.
+ # Нельзя оставлять [PREV.Controller.GetVictoryPointName_*] в _RENAME: карта выводит это как обычный текст.
+ VICTORY_POINTS_434_RENAME: "Умань"
+ VICTORY_POINTS_504_RENAME: "Біла Церква"
+ VICTORY_POINTS_3399_RENAME: "Мала Токмачка"
+ VICTORY_POINTS_6507_RENAME: "Кременчук"
+ VICTORY_POINTS_11464_RENAME: "Бердичів"
+ VICTORY_POINTS_11700_RENAME: "Мелітополь"
+
+ # На случай если rename_state_effect заденет крупные переименованные города:
+ VICTORY_POINTS_11437_RENAME: "Сичеслав"
+ VICTORY_POINTS_11405_RENAME: "Запоріжжя"
+ VICTORY_POINTS_6474_RENAME: "Донецьк"
+ VICTORY_POINTS_9461_RENAME: "Луганськ"
+ VICTORY_POINTS_6451_RENAME: "Єлисаветград"
+ VICTORY_POINTS_11546_RENAME: "Миколаїв"
+ VICTORY_POINTS_11670_RENAME: "Одеса"
