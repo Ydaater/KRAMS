@@ -71,3 +71,14 @@ NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 0				-- WAS 30 | This many d
 NDefines.NDiplomacy.VOLUNTEERS_RETURN_EQUIPMENT = 1		-- Returning volunteers keep this much equipment
 --
 NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 50
+
+-- Override: ослабление боевого дебаффа от вражеских intel-сетей
+-- Положить в <мод>/common/defines/  (имя на zz_ чтобы грузилось ПОСЛЕ defines Kaiserreich)
+
+-- Множитель "danger" от сильнейшей вражеской сети над страной.
+-- Vanilla = 1. Уменьшено в 4 раза -> сила дебаффа = 25% от исходной.
+NDefines.NOperatives.INTEL_NETWORK_STRENGTH_DANGER_FACTOR = 0.25
+
+-- Порог силы сети в штате, ниже которого её модификаторы не применяются.
+-- Сила сети измеряется в диапазоне 0-100, поэтому 50% = 50.
+NDefines.NOperatives.INTEL_NETWORK_STATE_MODIFIER_STRENGTH_THRESHOLD = 50
