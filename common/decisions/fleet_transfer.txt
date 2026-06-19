@@ -1,0 +1,181 @@
+foreign_politics = {
+
+	# ============ ENG просит у SRI, FRA, SPA, RUS ============
+
+	ENG_request_fleet_SRI = {
+		icon = generic_navy
+		allowed = { tag = ENG }
+
+		# SRI
+		visible = {
+			ENG = { is_ai = no }
+		}
+
+		available = {
+			has_completed_focus = ENG_revolutionary_admiralty
+			SRI = { is_in_faction_with = ENG }
+			has_political_power > 99
+		}
+
+		cost = 100
+		days_remove = 16
+
+		complete_effect = {
+			SRI = { country_event = { id = fleet_transfer.1 days = 1 } }
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	ENG_request_fleet_FRA = {
+		icon = generic_navy
+		allowed = { tag = ENG }
+
+		visible = {
+			ENG = { is_ai = no }
+		}
+
+		available = {
+			has_completed_focus = ENG_revolutionary_admiralty
+			FRA = { is_in_faction_with = ENG }
+			has_political_power > 99
+		}
+
+		cost = 100
+		days_remove = 16
+
+		complete_effect = {
+			FRA = { country_event = { id = fleet_transfer.2 days = 1 } }
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	ENG_request_fleet_SPA = {
+		icon = generic_navy
+		allowed = { tag = ENG }
+
+		visible = {
+			ENG = { is_ai = no }
+		}
+
+		available = {
+			has_completed_focus = ENG_revolutionary_admiralty
+			SPA = { is_in_faction_with = ENG }
+			has_political_power > 99
+		}
+
+		cost = 100
+		days_remove = 16
+
+		complete_effect = {
+			SPA = { country_event = { id = fleet_transfer.3 days = 1 } }
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	ENG_request_fleet_RUS = {
+		icon = generic_navy
+		allowed = { tag = ENG }
+
+		visible = {
+			ENG = { is_ai = no }
+		}
+
+		available = {
+			has_completed_focus = ENG_revolutionary_admiralty
+			has_political_power > 99
+			RUS = {
+				OR = {
+					has_government = totalist
+					has_government = syndicalist
+					has_government = radical_socialist
+				}
+			}
+		}
+
+		cost = 100
+		days_remove = 16
+
+		complete_effect = {
+			RUS = { country_event = { id = fleet_transfer.7 days = 1 } }
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	# ============ CAN просит у AST, NFA, RAJ ============
+
+	CAN_request_fleet_AST = {
+		icon = generic_navy
+		allowed = { tag = CAN }
+
+		visible = {
+			CAN = { is_ai = no }
+		}
+
+		available = {
+			has_completed_focus = CAN_preparations_for_war
+			AST = { is_in_faction_with = CAN }
+			has_political_power > 99
+		}
+
+		cost = 100
+		days_remove = 16
+
+		complete_effect = {
+			AST = { country_event = { id = fleet_transfer.4 days = 1 } }
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	CAN_request_fleet_NFA = {
+		icon = generic_navy
+		allowed = { tag = CAN }
+
+		visible = {
+			CAN = { is_ai = no }
+		}
+
+		available = {
+			has_completed_focus = CAN_preparations_for_war
+			NFA = { is_in_faction_with = CAN }
+			has_political_power > 99
+		}
+
+		cost = 100
+		days_remove = 16
+
+		complete_effect = {
+			NFA = { country_event = { id = fleet_transfer.5 days = 1 } }
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+
+	CAN_request_fleet_RAJ = {
+		icon = generic_navy
+		allowed = { tag = CAN }
+
+		visible = {
+			CAN = { is_ai = no }
+		}
+
+		available = {
+			has_completed_focus = CAN_preparations_for_war
+			RAJ = { is_in_faction_with = CAN }
+			has_political_power > 99
+		}
+
+		cost = 100
+		days_remove = 16
+
+		complete_effect = {
+			RAJ = { country_event = { id = fleet_transfer.6 days = 1 } }
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+}
