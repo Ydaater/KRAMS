@@ -1,0 +1,147 @@
+add_namespace = fleet_transfer
+
+# ============ Цели ENG: SRI, FRA, SPA, RUS ============
+
+country_event = {
+	id = fleet_transfer.1
+	title = fleet_transfer.1.t
+	desc = fleet_transfer.1.d
+	picture = GFX_report_event_naval_battle
+	is_triggered_only = yes
+
+	option = {
+		name = fleet_transfer.1.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		transfer_navy = { target = ENG }
+	}
+	option = {
+		name = fleet_transfer.1.b
+		ai_chance = { factor = 0 }
+		ENG = { add_political_power = 100 }
+	}
+}
+
+country_event = {
+	id = fleet_transfer.2
+	title = fleet_transfer.1.t
+	desc = fleet_transfer.1.d
+	picture = GFX_report_event_naval_battle
+	is_triggered_only = yes
+
+	option = {
+		name = fleet_transfer.1.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		transfer_navy = { target = ENG }
+	}
+	option = {
+		name = fleet_transfer.1.b
+		ai_chance = { factor = 0 }
+		ENG = { add_political_power = 100 }
+	}
+}
+
+country_event = {
+	id = fleet_transfer.3
+	title = fleet_transfer.1.t
+	desc = fleet_transfer.1.d
+	picture = GFX_report_event_naval_battle
+	is_triggered_only = yes
+
+	option = {
+		name = fleet_transfer.1.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		transfer_navy = { target = ENG }
+	}
+	option = {
+		name = fleet_transfer.1.b
+		ai_chance = { factor = 0 }
+		ENG = { add_political_power = 100 }
+	}
+}
+
+# ============ Цели CAN: AST, NFA, RAJ ============
+
+country_event = {
+	id = fleet_transfer.4
+	title = fleet_transfer.4.t
+	desc = fleet_transfer.4.d
+	picture = GFX_report_event_naval_battle
+	is_triggered_only = yes
+
+	option = {
+		name = fleet_transfer.4.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		transfer_navy = { target = CAN }
+	}
+	option = {
+		name = fleet_transfer.4.b
+		ai_chance = { factor = 0 }
+		CAN = { add_political_power = 100 }
+	}
+}
+
+country_event = {
+	id = fleet_transfer.5
+	title = fleet_transfer.4.t
+	desc = fleet_transfer.4.d
+	picture = GFX_report_event_naval_battle
+	is_triggered_only = yes
+
+	option = {
+		name = fleet_transfer.4.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		transfer_navy = { target = CAN }
+	}
+	option = {
+		name = fleet_transfer.4.b
+		ai_chance = { factor = 0 }
+		CAN = { add_political_power = 100 }
+	}
+}
+
+country_event = {
+	id = fleet_transfer.6
+	title = fleet_transfer.4.t
+	desc = fleet_transfer.4.d
+	picture = GFX_report_event_naval_battle
+	is_triggered_only = yes
+
+	option = {
+		name = fleet_transfer.4.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		transfer_navy = { target = CAN }
+	}
+	option = {
+		name = fleet_transfer.4.b
+		ai_chance = { factor = 0 }
+		CAN = { add_political_power = 100 }
+	}
+}
+
+# ============ Цель ENG: RUS ============
+
+country_event = {
+	id = fleet_transfer.7
+	title = fleet_transfer.1.t
+	desc = fleet_transfer.1.d
+	picture = GFX_report_event_naval_battle
+	is_triggered_only = yes
+
+	option = {
+		name = fleet_transfer.1.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		transfer_navy = { target = ENG }
+	}
+	option = {
+		name = fleet_transfer.1.b
+		ai_chance = { factor = 0 }
+		ENG = { add_political_power = 100 }
+	}
+}
