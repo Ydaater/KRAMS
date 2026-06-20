@@ -18193,6 +18193,7 @@ country_event = { #Death of Wilhelm II
 		name = germany_flavour_events.9.a
 		hidden_effect = {
 			GER_wilhelm_ii_dies = yes
+			GER_wilhelm_iii = { clr_character_flag = show_unit_leader_role } #TODO: revert when bug with country_leader variable is fixed
 		}
 		country_event = { id = germany_flavour_events.10 days = 5 }
 	}
