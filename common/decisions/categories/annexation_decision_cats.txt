@@ -1,0 +1,7 @@
+generic_mp_annex_category = {
+	icon = generic_decision_category
+	visible = {
+		is_ai = no
+	}
+}
+ 
