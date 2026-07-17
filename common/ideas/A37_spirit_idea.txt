@@ -1,0 +1,18 @@
+ideas = {
+	country = {
+
+		KRW_black_wednesday = {
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = 1.50
+				conscription_factor = -1.0
+				consumer_goods_factor = 2.0
+				production_speed_buildings_factor = -0.40
+				production_factory_max_efficiency_factor = -0.40
+				production_factory_efficiency_gain_factor = -0.40
+			}
+		}
+	}
+}
