@@ -176,6 +176,7 @@ set_popularities = {
 }
 
 create_faction_from_template = faction_template_reichspakt
+scope:faction = { set_variable = { faction_template_reichspakt_var = 1 } }
 
 # Election variables
 set_variable = { GER_farleft_seats = 8 }
