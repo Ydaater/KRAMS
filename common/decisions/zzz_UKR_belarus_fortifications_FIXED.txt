@@ -1,46 +1,41 @@
 ############################################################
-# Ukraine: Belarusian fortification decisions
-# Place this file in:
-#   <your_submod>/common/decisions/
+# Ukraine: Belarusian fortification decisions — FIXED
+# Put in: <submod>/common/decisions/
 #
-# Standalone implementation: no focus, event or activation
-# effect is required. The decisions become visible to Ukraine
-# as soon as it owns the relevant Belarusian states.
+# Uses the already existing generic category political_actions,
+# so no separate common/decisions/categories file is required.
 ############################################################
 
-UKR_belarus_fortification_decisions = {
+political_actions = {
 
-	# Former BLR_dnipro_line
 	UKR_build_dnipro_line = {
+		name = BLR_dnipro_line
+		desc = BLR_dnipro_line_desc
 		icon = GFX_decision_fortress
 
-		allowed = {
-			original_tag = UKR
+		# Load the decision for all countries; visibility restricts it to Ukraine.
+		# This is safer for existing saves than relying on a newly created category.
+		allowed = { always = yes }
+
+		visible = {
+			tag = UKR
+			owns_state = 194
+			owns_state = 1087
 		}
 
 		available = {
-			has_full_control_of_state = 194 # Mozyr
-			has_full_control_of_state = 1087 # Mohilev
-		}
-
-		visible = {
-			owns_state = 194
-			owns_state = 1087
+			tag = UKR
+			has_full_control_of_state = 194
+			has_full_control_of_state = 1087
 		}
 
 		cost = 50
 		days_remove = 60
 		fire_only_once = yes
 		cancel_if_not_visible = yes
+		modifier = { consumer_goods_factor = 0.1 }
 
-		# Same temporary penalty as the original Belarusian decision.
-		modifier = {
-			consumer_goods_factor = 0.1
-		}
-
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 
 		highlight_states = {
 			highlight_state_targets = {
@@ -51,9 +46,7 @@ UKR_belarus_fortification_decisions = {
 
 		cancel_effect = {
 			log = "[GetLogRoot]: Decision cancel UKR_build_dnipro_line"
-			hidden_effect = {
-				add_political_power = 50
-			}
+			hidden_effect = { add_political_power = 50 }
 		}
 
 		complete_effect = {
@@ -107,37 +100,32 @@ UKR_belarus_fortification_decisions = {
 		fixed_random_seed = no
 	}
 
-	# Former BLR_dvina_line
 	UKR_build_dvina_line = {
+		name = BLR_dvina_line
+		desc = BLR_dvina_line_desc
 		icon = GFX_decision_fortress
 
-		allowed = {
-			original_tag = UKR
+		allowed = { always = yes }
+
+		visible = {
+			tag = UKR
+			owns_state = 1087
+			owns_state = 207
 		}
 
 		available = {
-			has_full_control_of_state = 1087 # Mohilev
-			has_full_control_of_state = 207 # Braslav
-		}
-
-		visible = {
-			owns_state = 1087
-			owns_state = 207
+			tag = UKR
+			has_full_control_of_state = 1087
+			has_full_control_of_state = 207
 		}
 
 		cost = 40
 		days_remove = 60
 		fire_only_once = yes
 		cancel_if_not_visible = yes
+		modifier = { consumer_goods_factor = 0.1 }
 
-		# Same temporary penalty as the original Belarusian decision.
-		modifier = {
-			consumer_goods_factor = 0.1
-		}
-
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 
 		highlight_states = {
 			highlight_state_targets = {
@@ -148,9 +136,7 @@ UKR_belarus_fortification_decisions = {
 
 		cancel_effect = {
 			log = "[GetLogRoot]: Decision cancel UKR_build_dvina_line"
-			hidden_effect = {
-				add_political_power = 40
-			}
+			hidden_effect = { add_political_power = 40 }
 		}
 
 		complete_effect = {
