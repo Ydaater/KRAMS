@@ -1,0 +1,221 @@
+############################################################
+# Ukraine: Belarusian fortification decisions — REWORKED
+# Put in: <submod>/common/decisions/
+#
+# Uses the existing political_actions decision category,
+# so this remains a single standalone file.
+#
+# Decision 1:
+#   Braslav: +1 fort on every province bordering Russia
+#   Mohilev: +2 forts on every province bordering Russia
+#
+# Decision 2:
+#   +1 fort in selected provinces behind the Pripyat River
+############################################################
+
+political_actions = {
+
+	# Combined northern fortification programme.
+	# Reuses the original Belarusian Dvina Line localisation.
+	UKR_build_dvina_line = {
+		name = BLR_dvina_line
+		desc = BLR_dvina_line_desc
+		icon = GFX_decision_fortress
+
+		allowed = { always = yes }
+
+		visible = {
+			tag = UKR
+			owns_state = 1087 # Mohilev
+			owns_state = 207  # Braslav
+		}
+
+		available = {
+			tag = UKR
+			has_full_control_of_state = 1087 # Mohilev
+			has_full_control_of_state = 207  # Braslav
+		}
+
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+		modifier = { consumer_goods_factor = 0.1 }
+
+		ai_will_do = { factor = 25 }
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1087
+				state = 207
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot]: Decision cancel UKR_build_dvina_line"
+			hidden_effect = { add_political_power = 40 }
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete UKR_build_dvina_line"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove UKR_build_dvina_line"
+
+			1087 = { # Mohilev: +2 forts on the Russian border
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border_country = RUS
+						}
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_border_provinces_with_tag
+						BUILDING = bunker
+						NUMBER = 2
+						TAG = "[RUS.GetTag]"
+					}
+				}
+			}
+
+			207 = { # Braslav: +1 fort on the Russian border
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border_country = RUS
+						}
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_border_provinces_with_tag
+						BUILDING = bunker
+						NUMBER = 1
+						TAG = "[RUS.GetTag]"
+					}
+				}
+			}
+		}
+
+		fixed_random_seed = no
+	}
+
+	# Emergency fallback line behind the Pripyat River.
+	# Reuses the old Dnieper Line localisation to keep the mod one-file.
+	UKR_build_dnipro_line = {
+		name = BLR_dnipro_line
+		desc = BLR_dnipro_line_desc
+		icon = GFX_decision_fortress
+
+		allowed = { always = yes }
+
+		visible = {
+			tag = UKR
+			owns_state = 194 # Mozyr
+			owns_state = 95  # Pinsk
+			owns_state = 792 # Volhynia
+		}
+
+		available = {
+			tag = UKR
+			has_full_control_of_state = 194 # Mozyr
+			has_full_control_of_state = 95  # Pinsk
+			has_full_control_of_state = 792 # Volhynia
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+		modifier = { consumer_goods_factor = 0.1 }
+
+		ai_will_do = { factor = 25 }
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 194
+				state = 95
+				state = 792
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot]: Decision cancel UKR_build_dnipro_line"
+			hidden_effect = { add_political_power = 50 }
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete UKR_build_dnipro_line"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove UKR_build_dnipro_line"
+
+			194 = { # Mozyr
+				add_building_construction = {
+					type = bunker
+					province = 11453
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6232
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9554
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 535
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			95 = { # Pinsk
+				add_building_construction = {
+					type = bunker
+					province = 6579
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11503
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3496
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			792 = { # Volhynia
+				add_building_construction = {
+					type = bunker
+					province = 9520
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		fixed_random_seed = no
+	}
+}
