@@ -1,0 +1,206 @@
+############################################################
+# Ukraine: Belarusian fortification decisions
+# Place this file in:
+#   <your_submod>/common/decisions/
+#
+# Standalone implementation: no focus, event or activation
+# effect is required. The decisions become visible to Ukraine
+# as soon as it owns the relevant Belarusian states.
+############################################################
+
+UKR_belarus_fortification_decisions = {
+
+	# Former BLR_dnipro_line
+	UKR_build_dnipro_line = {
+		icon = GFX_decision_fortress
+
+		allowed = {
+			original_tag = UKR
+		}
+
+		available = {
+			has_full_control_of_state = 194 # Mozyr
+			has_full_control_of_state = 1087 # Mohilev
+		}
+
+		visible = {
+			owns_state = 194
+			owns_state = 1087
+		}
+
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		# Same temporary penalty as the original Belarusian decision.
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 194
+				state = 1087
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot]: Decision cancel UKR_build_dnipro_line"
+			hidden_effect = {
+				add_political_power = 50
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete UKR_build_dnipro_line"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove UKR_build_dnipro_line"
+
+			194 = { # Mozyr
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border_country = RUS
+						}
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_border_provinces_with_tag
+						BUILDING = bunker
+						NUMBER = 1
+						TAG = "[RUS.GetTag]"
+					}
+				}
+			}
+
+			1087 = { # Mohilev
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border_country = RUS
+						}
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_border_provinces_with_tag
+						BUILDING = bunker
+						NUMBER = 1
+						TAG = "[RUS.GetTag]"
+					}
+				}
+			}
+		}
+
+		fixed_random_seed = no
+	}
+
+	# Former BLR_dvina_line
+	UKR_build_dvina_line = {
+		icon = GFX_decision_fortress
+
+		allowed = {
+			original_tag = UKR
+		}
+
+		available = {
+			has_full_control_of_state = 1087 # Mohilev
+			has_full_control_of_state = 207 # Braslav
+		}
+
+		visible = {
+			owns_state = 1087
+			owns_state = 207
+		}
+
+		cost = 40
+		days_remove = 60
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		# Same temporary penalty as the original Belarusian decision.
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1087
+				state = 207
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot]: Decision cancel UKR_build_dvina_line"
+			hidden_effect = {
+				add_political_power = 40
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete UKR_build_dvina_line"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove UKR_build_dvina_line"
+
+			1087 = { # Mohilev
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border_country = RUS
+						}
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_border_provinces_with_tag
+						BUILDING = bunker
+						NUMBER = 1
+						TAG = "[RUS.GetTag]"
+					}
+				}
+			}
+
+			207 = { # Braslav
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border_country = RUS
+						}
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_border_provinces_with_tag
+						BUILDING = bunker
+						NUMBER = 1
+						TAG = "[RUS.GetTag]"
+					}
+				}
+			}
+		}
+
+		fixed_random_seed = no
+	}
+}
