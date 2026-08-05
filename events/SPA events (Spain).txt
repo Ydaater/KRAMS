@@ -2556,6 +2556,9 @@ country_event = { #SWF in Africa what to do with the Rif
 		trigger = {
 			NOT = { tag = GER }
 		}
+		290 = {
+			add_core_of = NFA
+		}		
 		add_manpower = -1000
 		add_equipment_to_stockpile = { type = infantry_equipment amount = -500 }
 		SWF = {
@@ -2572,18 +2575,18 @@ country_event = { #SWF in Africa what to do with the Rif
 		log = "[GetLogInfo]: event spanish_civil_war_events.507 option spanish_civil_war_events.507.c"
 		name = spanish_civil_war_events.507.c #Don't
 		ai_chance = { base = 0 }
-		add_political_power = -100
+		add_political_power = -1
 		if = {
 			limit = {
 				NOT = { tag = NFA }
 				country_exists = NFA
 				NFA = { has_capitulated = no }
 			}
-			add_political_power = -10
+			add_political_power = 1
 			NFA = { country_event = spanish_civil_war_events.507 }
 		}
 		else = {
-			add_political_power = -100
+			add_political_power = -1
 		}
 	}
 }
