@@ -19,6 +19,7 @@ add_ideas = {
 
 set_variable = { country_intro_page_count = 5 }
 set_variable = { GER_wissell_plan_scope = 0 }
+set_variable = { GER_schacht_hate = -0.03 }										   
 
 ### Starting Technologies ###
 set_technology = {
@@ -217,7 +218,7 @@ country_event = { id = germany_events.59 days = 730 random_days = 100 } #Ruhrkam
 
 country_event = { id = germany_schleicher_events.14 days = 181 } #Ruhrkampf begins
 country_event = { id = germany_schleicher_events.291 days = 305 } #Kaiser Intervention - fixed 1 November
-country_event = { id = germany_schleicher_events.40 days = 335 } #Red Brunswick - fixed 1 December
+country_event = { id = germany_schleicher_events.40 days = 318 } #Red Brunswick - fixed 1 December
 #country_event = { id = germany_schleicher_events.58 days = 711 } #Tat Circle
 country_event = { id = germany_schleicher_events.60 days = 720 random_days = 15 } #1938 Budget Vote
 #country_event = { id = germany_schleicher_events.61 days = 365 random_days = 30 } #Agrarian Question
