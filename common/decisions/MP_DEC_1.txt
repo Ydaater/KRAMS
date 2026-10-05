@@ -141,6 +141,10 @@ FRA_internationale_category = {
 			}
 			#ENG = { is_ai = yes }
 			#USA = { is_ai = no }
+			OR = {
+				SRI = { is_ai = yes }
+				date > 1939.1.5
+			}
 		}
 		#cost = 100
 		fire_only_once = yes
