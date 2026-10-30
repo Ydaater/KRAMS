@@ -29,7 +29,7 @@ NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999
 --NDefines.NMilitary.LEADER_EXPERIENCE_SCALE = 2
 --NDefines.NMilitary.XP_DECAY_RATE_PER_HOUR_IN_COMBAT = 0.00
---NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- allows leaders to grind without malus if they gain traits
+NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- allows leaders to grind without malus if they gain traits
 --NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.45 -- Vanilla is 0.45
 --NDefines.NMilitary.LEND_LEASE_FIELD_EXPERIENCE_SCALE = 0.001 -- Encourage more Lend-Lease for XP gain vanilla = 0.0005
 --NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1,	-- Vanilla 0.5 If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
