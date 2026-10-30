@@ -1,5 +1,5 @@
 FRA_internationale_category = {
-	FRA_Integratet_ENG = {
+	1Экономическая_интеграция_Англии = {
 		icon = generic_break_treaty
 		allowed = { tag = FRA }
 		visible = {
@@ -127,7 +127,7 @@ FRA_internationale_category = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	FRA_Integratet_SPA = {
+	1Экономическая_интеграция_Испании = {
 		icon = generic_break_treaty
 		allowed = { tag = FRA }
 		visible = {
@@ -141,10 +141,6 @@ FRA_internationale_category = {
 			}
 			#ENG = { is_ai = yes }
 			#USA = { is_ai = no }
-			OR = {
-				SRI = { is_ai = yes }
-				date > 1939.1.5
-			}
 		}
 		#cost = 100
 		fire_only_once = yes
@@ -203,7 +199,7 @@ FRA_internationale_category = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	FRA_Integratet_IRE = {
+	1Экономическая_интеграция_Ирландии = {
 		icon = generic_break_treaty
 		allowed = { tag = FRA }
 		visible = {
@@ -212,7 +208,6 @@ FRA_internationale_category = {
 		#cost = 100
 		available = {
 			ENG = { is_ai = yes }
-			date > 1936.1.5
 			NOT = { IRE = { is_in_faction_with = FRA }}
 		}
 		
@@ -237,14 +232,13 @@ FRA_internationale_category = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	FRA_Integratet_SRI = {
+	1Экономическая_интеграция_Италии = {
 		icon = generic_break_treaty
 		allowed = { tag = FRA }
 		visible = {
 			SRI = { is_ai = yes }
 		}
 		available = {
-			USA = { is_ai = no }
 			SRI = { is_ai = yes }
 			SRI = { has_country_flag = SRI_italy_unified_flag }
 		}
@@ -312,15 +306,15 @@ FRA_internationale_category = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	FRA_Integratet_NOR = {
+	1Экономическая_интеграция_Норвегии = {
 		icon = generic_break_treaty
 		allowed = { tag = FRA }
 		visible = {
-			USA = { is_ai = no }
 			ENG = { is_ai = yes }
 		}
 		available = {
-			USA = { is_ai = no }
+			USA = { is_ai = yes }
+			WCA = { is_ai = yes }
 			NOR = { is_ai = yes }
 			ENG = { is_ai = yes }
 			NOT = { NOR = { is_in_faction_with = FRA }}
@@ -357,16 +351,15 @@ FRA_internationale_category = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	FRA_Integratet_MEX = {
+	1Экономическая_интеграция_Мексики = {
 		icon = generic_break_treaty
 		allowed = { tag = FRA }
 		visible = {
-			USA = { is_ai = no }
-			MEX = { is_ai = yes }
 			ENG = { is_ai = yes }
 		}
 		available = {
-			USA = { is_ai = no }
+			USA = { is_ai = yes }
+			WCA = { is_ai = yes }
 			NOT = { MEX = { is_in_faction_with = FRA }}
 			ENG = { is_ai = yes }
 			date > 1936.1.5
@@ -397,7 +390,7 @@ FRA_internationale_category = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	FRA_Integratet_VVS = {
+	2Развитие_ВВС = {
 		icon = generic_break_treaty
 		allowed = { tag = FRA }
 		visible = {
@@ -429,7 +422,7 @@ FRA_internationale_category = {
 
 foreign_politics = { 
 
-	ENG_Integratet_IRE = {
+	2Экономическая_интеграция_Ирландии = {
 		icon = generic_break_treaty
 		allowed = { tag = ENG }
 		visible = {
@@ -473,14 +466,15 @@ foreign_politics = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	ENG_Integratet_NOR = {
+	2Экономическая_интеграция_Норвегии = {
 		icon = generic_break_treaty
 		allowed = { tag = ENG }
 		visible = {
 			NOR = { is_ai = yes }
 		}
 		available = {
-			USA = { is_ai = no }
+			USA = { is_ai = yes }
+			WCA = { is_ai = yes }
 			NOR = { is_ai = yes }
 		}
 		#cost = 100
@@ -515,14 +509,15 @@ foreign_politics = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	ENG_Integratet_MEX = {
+	2Экономическая_интеграция_Мексики = {
 		icon = generic_break_treaty
 		allowed = { tag = ENG }
 		visible = {
 			MEX = { is_ai = yes }
 		}
 		available = {
-			USA = { is_ai = no }
+			USA = { is_ai = yes }
+			WCA = { is_ai = yes }
 			MEX = { is_ai = yes }
 		}
 		#cost = 100

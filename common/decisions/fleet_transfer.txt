@@ -2,7 +2,7 @@ foreign_politics = {
 
 	# ============ ENG просит у SRI, FRA, SPA, RUS ============
 
-	ENG_request_fleet_SRI = {
+	Забрать_флот_у_Италии = {
 		icon = generic_navy
 		allowed = { tag = ENG }
 
@@ -27,7 +27,7 @@ foreign_politics = {
 		ai_will_do = { factor = 0 }
 	}
 
-	ENG_request_fleet_FRA = {
+	Забрать_флот_у_Франции = {
 		icon = generic_navy
 		allowed = { tag = ENG }
 
@@ -51,7 +51,7 @@ foreign_politics = {
 		ai_will_do = { factor = 0 }
 	}
 
-	ENG_request_fleet_SPA = {
+	Забрать_флот_у_Испании = {
 		icon = generic_navy
 		allowed = { tag = ENG }
 
@@ -75,7 +75,7 @@ foreign_politics = {
 		ai_will_do = { factor = 0 }
 	}
 
-	ENG_request_fleet_RUS = {
+	Забрать_флот_у_России = {
 		icon = generic_navy
 		allowed = { tag = ENG }
 
@@ -107,7 +107,7 @@ foreign_politics = {
 
 	# ============ CAN просит у AST, NFA, RAJ ============
 
-	CAN_request_fleet_AST = {
+	Забрать_флот_у_Австралазии = {
 		icon = generic_navy
 		allowed = { tag = CAN }
 
@@ -131,7 +131,7 @@ foreign_politics = {
 		ai_will_do = { factor = 0 }
 	}
 
-	CAN_request_fleet_NFA = {
+	Забрать_флот_у_Песочной_Франции = {
 		icon = generic_navy
 		allowed = { tag = CAN }
 
@@ -155,7 +155,7 @@ foreign_politics = {
 		ai_will_do = { factor = 0 }
 	}
 
-	CAN_request_fleet_RAJ = {
+	Забрать_флот_у_Индии = {
 		icon = generic_navy
 		allowed = { tag = CAN }
 
