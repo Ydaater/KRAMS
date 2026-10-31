@@ -1,0 +1,10 @@
+# Triggers the doctrine mastery bonus once at the start of the game
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				doctrine_monthly_bonus_effect = yes
+			}
+		}
+	}
+}
