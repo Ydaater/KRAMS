@@ -14,5 +14,55 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.40
 			}
 		}
+		
+	}
+}
+
+ideas = {
+	country = {
+		IRE_industry_to_eng_idea = {
+			picture = generic_production_bonus
+			
+			# targeted_modifier добавляет приписку "(Англия)" в тултипе
+			targeted_modifier = {
+				tag = ENG
+				cic_to_target_factor = 1
+				mic_to_target_factor = 1
+				nic_to_target_factor = 1.0 # Передает 100% верфей
+			}
+		}
+		
+		FIN_industry_to_RUS_idea = {
+			picture = generic_production_bonus
+			
+			# targeted_modifier добавляет приписку "(Англия)" в тултипе
+			targeted_modifier = {
+				tag = RUS
+				cic_to_target_factor = 1
+				mic_to_target_factor = 1
+			}
+		}
+		
+		MON_industry_to_RUS_idea = {
+			picture = generic_production_bonus
+			
+			# targeted_modifier добавляет приписку "(Англия)" в тултипе
+			targeted_modifier = {
+				tag = RUS
+				cic_to_target_factor = 1
+				mic_to_target_factor = 1
+			}
+		}
+		
+		SPA_industry_to_FRA_idea = {
+			picture = generic_production_bonus
+			
+			# targeted_modifier добавляет приписку "(Англия)" в тултипе
+			targeted_modifier = {
+				tag = FRA
+				cic_to_target_factor = 1
+				mic_to_target_factor = 1
+			}
+		}
 	}
 }
