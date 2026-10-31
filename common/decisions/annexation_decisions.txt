@@ -20,6 +20,35 @@ generic_mp_annex_category = {
 		fire_only_once = yes
 
 		complete_effect = {
+			IRE = {
+				add_ideas = IRE_industry_to_eng_idea
+				
+			}
+			
+			FIN = {
+				if = { 
+					limit = { is_ai = yes }
+					add_ideas = SPA_industry_to_FRA_idea
+				} 
+				
+			}
+			
+			MON = {
+				if = { 
+					limit = { is_ai = yes }
+					add_ideas = SPA_industry_to_FRA_idea
+				} 
+				
+			}
+			
+			SPA = {
+				if = { 
+					limit = { is_ai = yes }
+					add_ideas = SPA_industry_to_FRA_idea
+				} 
+			}
+			
+			
 
 			# ===== 1) A37: первая группа + Бутан =====
 			A37 = {

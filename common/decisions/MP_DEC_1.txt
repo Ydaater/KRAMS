@@ -443,7 +443,7 @@ foreign_politics = {
 				#add_political_power = 100
 				set_autonomy = {
 					target = IRE
-					autonomy_state = auto2
+					autonomy_state = nominal_puppet
 				}
 			}
 			IRE = {
