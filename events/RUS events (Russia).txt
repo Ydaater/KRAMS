@@ -9397,13 +9397,7 @@ country_event = { #Semyonov's Return
 	picture = GFX_report_event_RUS_semyonov
 	is_triggered_only = yes
 	trigger = {
-		OR = {
-			has_socialist_government = yes
-			RUS_savinkov = yes
-		}
-		has_country_flag = RUS_semyonov_uprising
-		FER = { has_character = RUS_grigory_semyonov }
-		NOT = { has_war_with = JAP }
+		always = no
 	}
 
 	fire_only_once = yes
