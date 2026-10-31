@@ -1,0 +1,9 @@
+# Scripted effect to give daily doctrine mastery to all countries for 1800 days
+doctrine_monthly_bonus_effect = {
+	add_daily_mastery = {
+		name = ALL_monthly_surface_navy_mastery
+		amount = 1.0
+		days = 2500
+		folder = navy
+	}
+}
