@@ -28,7 +28,7 @@ generic_mp_annex_category = {
 			FIN = {
 				if = { 
 					limit = { is_ai = yes }
-					add_ideas = SPA_industry_to_FRA_idea
+					add_ideas = FIN_industry_to_RUS_idea
 				} 
 				
 			}
@@ -36,7 +36,7 @@ generic_mp_annex_category = {
 			MON = {
 				if = { 
 					limit = { is_ai = yes }
-					add_ideas = SPA_industry_to_FRA_idea
+					add_ideas = MON_industry_to_RUS_idea
 				} 
 				
 			}
