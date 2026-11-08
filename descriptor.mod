@@ -11,4 +11,5 @@ dependencies={
 	"Kaiserreich - Germany Simplified"
 }
 supported_version="1.19.4.0"
+picture="thumbnail.png"
 remote_file_id="3729794964"
