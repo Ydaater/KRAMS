@@ -9,9 +9,10 @@ ideas = {
 				political_power_cost = 1.50
 				conscription_factor = -1.0
 				consumer_goods_factor = 2.0
-				production_speed_buildings_factor = -0.40
-				production_factory_max_efficiency_factor = -0.40
-				production_factory_efficiency_gain_factor = -0.40
+				production_speed_buildings_factor = -10
+				production_factory_max_efficiency_factor = -40
+				production_factory_efficiency_gain_factor = -40
+				send_volunteer_size = -200
 			}
 		}
 		
