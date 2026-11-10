@@ -1,0 +1,132 @@
+##############################################
+#  Единое решение (игрок-человек):
+#   1) Первая группа + Бутан -> A37
+#   2) Марокко, Либерия -> NFA
+#   3) Гаити, Доминикана, Куба -> WIF
+#   4) Литва -> POL
+#   5) Белоруссия -> UKR
+##############################################
+
+generic_mp_annex_category = {
+
+	MP_annex_all = {
+		icon = generic_attack
+
+		visible = {
+			is_ai = no
+		}
+
+		available = { always = yes }
+		fire_only_once = yes
+
+		complete_effect = {
+			IRE = {
+				add_ideas = IRE_industry_to_eng_idea
+				
+			}
+			
+			FIN = {
+				if = { 
+					limit = { is_ai = yes }
+					add_ideas = FIN_industry_to_RUS_idea
+				} 
+				
+			}
+			
+			MON = {
+				if = { 
+					limit = { is_ai = yes }
+					add_ideas = MON_industry_to_RUS_idea
+				} 
+				
+			}
+			
+			SPA = {
+				if = { 
+					limit = { is_ai = yes }
+					add_ideas = SPA_industry_to_FRA_idea
+				} 
+			}
+			
+			
+
+			# ===== 1) A37: первая группа + Бутан =====
+			A37 = {
+				if = { limit = { BHU = { exists = yes } } BHU = { every_owned_state = { add_core_of = A37 } } annex_country = { target = BHU transfer_troops = no } }
+				if = { limit = { TIB = { exists = yes } } TIB = { every_owned_state = { add_core_of = A37 } } annex_country = { target = TIB transfer_troops = no } }
+				if = { limit = { COL = { exists = yes } } COL = { every_owned_state = { add_core_of = A37 } } annex_country = { target = COL transfer_troops = no } }
+				if = { limit = { PRU = { exists = yes } } PRU = { every_owned_state = { add_core_of = A37 } } annex_country = { target = PRU transfer_troops = no } }
+				if = { limit = { BOL = { exists = yes } } BOL = { every_owned_state = { add_core_of = A37 } } annex_country = { target = BOL transfer_troops = no } }
+				if = { limit = { ECU = { exists = yes } } ECU = { every_owned_state = { add_core_of = A37 } } annex_country = { target = ECU transfer_troops = no } }
+				if = { limit = { PAR = { exists = yes } } PAR = { every_owned_state = { add_core_of = A37 } } annex_country = { target = PAR transfer_troops = no } }
+				if = { limit = { ETH = { exists = yes } } ETH = { every_owned_state = { add_core_of = A37 } } annex_country = { target = ETH transfer_troops = no } }
+				if = { limit = { SOM = { exists = yes } } SOM = { every_owned_state = { add_core_of = A37 } } annex_country = { target = SOM transfer_troops = no } }
+				if = { limit = { AFG = { exists = yes } } AFG = { every_owned_state = { add_core_of = A37 } } annex_country = { target = AFG transfer_troops = no } }
+				if = { limit = { BRM = { exists = yes } } BRM = { every_owned_state = { add_core_of = A37 } } annex_country = { target = BRM transfer_troops = no } }
+				if = { limit = { SIK = { exists = yes } } SIK = { every_owned_state = { add_core_of = A37 } } annex_country = { target = SIK transfer_troops = no } }
+				if = { limit = { SZC = { exists = yes } } SZC = { every_owned_state = { add_core_of = A37 } } annex_country = { target = SZC transfer_troops = no } }
+				if = { limit = { YUN = { exists = yes } } YUN = { every_owned_state = { add_core_of = A37 } } annex_country = { target = YUN transfer_troops = no } }
+				if = { limit = { GXC = { exists = yes } } GXC = { every_owned_state = { add_core_of = A37 } } annex_country = { target = GXC transfer_troops = no } }
+				if = { limit = { HNN = { exists = yes } } HNN = { every_owned_state = { add_core_of = A37 } } annex_country = { target = HNN transfer_troops = no } }
+				if = { limit = { KUM = { exists = yes } } KUM = { every_owned_state = { add_core_of = A37 } } annex_country = { target = KUM transfer_troops = no } }
+				if = { limit = { URG = { exists = yes } } URG = { every_owned_state = { add_core_of = A37 } } annex_country = { target = URG transfer_troops = no } }
+				if = { limit = { FOP = { exists = yes } } FOP = { every_owned_state = { add_core_of = A37 } } annex_country = { target = FOP transfer_troops = no } }
+				if = { limit = { CHL = { exists = yes } } CHL = { every_owned_state = { add_core_of = A37 } } annex_country = { target = CHL transfer_troops = no } }
+				if = { limit = { ARG = { exists = yes } } ARG = { every_owned_state = { add_core_of = A37 } } annex_country = { target = ARG transfer_troops = no } }
+				if = { limit = { XSM = { exists = yes } } XSM = { every_owned_state = { add_core_of = A37 } } annex_country = { target = XSM transfer_troops = no } }
+
+				add_ideas = KRW_black_wednesday
+
+				every_owned_state = {
+					set_building_level = { type = arms_factory level = 0 }
+					set_building_level = { type = industrial_complex level = 0 }
+					set_building_level = { type = dockyard level = 0 }
+					set_building_level = { type = infrastructure level = 0 }
+					set_building_level = { type = air_base level = 0 }
+					set_building_level = { type = anti_air_building level = 0 }
+					set_building_level = { type = synthetic_refinery level = 0 }
+					set_building_level = { type = fuel_silo level = 0 }
+					set_building_level = { type = radar_station level = 0 }
+					set_building_level = { type = naval_base level = 0 }
+					set_building_level = { type = rocket_site level = 0 }
+					set_building_level = { type = bunker level = 0 }
+					set_building_level = { type = coastal_bunker level = 0 }
+				}
+			}
+
+			# ===== 2) NFA: Марокко, Либерия =====
+			NFA = {
+				if = { limit = { MOR = { exists = yes } } MOR = { every_owned_state = { add_core_of = NFA } } annex_country = { target = MOR transfer_troops = no } }
+				if = { limit = { LIB = { exists = yes } } LIB = { every_owned_state = { add_core_of = NFA } } annex_country = { target = LIB transfer_troops = no } }
+			}
+
+			# ===== 3) WIF: Гаити, Доминикана, Куба =====
+			WIF = {
+				if = { limit = { HAI = { exists = yes } } HAI = { every_owned_state = { add_core_of = WIF } } annex_country = { target = HAI transfer_troops = no } }
+				if = { limit = { DOM = { exists = yes } } DOM = { every_owned_state = { add_core_of = WIF } } annex_country = { target = DOM transfer_troops = no } }
+				if = { limit = { CUB = { exists = yes } } CUB = { every_owned_state = { add_core_of = WIF } } annex_country = { target = CUB transfer_troops = no } }
+			}
+
+			# ===== 4) POL: Литва =====
+			POL = {
+				if = { limit = { LIT = { exists = yes } } LIT = { every_owned_state = { add_core_of = POL } } annex_country = { target = LIT transfer_troops = no } }
+			}
+
+			# ===== 5) UKR: Белоруссия =====
+			UKR = {
+				if = { limit = { BLR = { exists = yes } } BLR = { every_owned_state = { add_core_of = UKR } } annex_country = { target = BLR transfer_troops = no } }
+			}
+			
+			MEX = {
+				if = { limit = { GUA = { exists = yes } } GUA = { every_owned_state = { add_core_of = MEX } } annex_country = { target = GUA transfer_troops = no } }
+				if = { limit = { ELS = { exists = yes } } ELS = { every_owned_state = { add_core_of = MEX } } annex_country = { target = ELS transfer_troops = no } }
+				if = { limit = { HON = { exists = yes } } HON = { every_owned_state = { add_core_of = MEX } } annex_country = { target = HON transfer_troops = no } }
+				if = { limit = { NIC = { exists = yes } } NIC = { every_owned_state = { add_core_of = MEX } } annex_country = { target = NIC transfer_troops = no } }
+				if = { limit = { COS = { exists = yes } } COS = { every_owned_state = { add_core_of = MEX } } annex_country = { target = COS transfer_troops = no } }
+				if = { limit = { PAN = { exists = yes } } PAN = { every_owned_state = { add_core_of = MEX } } annex_country = { target = PAN transfer_troops = no } }
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+	}
+}
