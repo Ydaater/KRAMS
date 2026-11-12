@@ -351,44 +351,44 @@ FRA_internationale_category = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	1Экономическая_интеграция_Мексики = {
-		icon = generic_break_treaty
-		allowed = { tag = FRA }
-		visible = {
-			ENG = { is_ai = yes }
-		}
-		available = {
-			USA = { is_ai = yes }
-			WCA = { is_ai = yes }
-			NOT = { MEX = { is_in_faction_with = FRA }}
-			ENG = { is_ai = yes }
-			date > 1936.1.5
-		}
-		#cost = 100
-		fire_only_once = yes
-
-		fire_only_once = yes
-		complete_effect = {
-			FRA = {
-				add_one_random_dockyard = yes
-				#add_political_power = 100
-				set_autonomy = {
-					target = MEX
-					autonomy_state = auto2
-				}
-			}
-			MEX = {
-				random_owned_controlled_state = {
-					limit = {
-						dockyard > 0
-					}
-					remove_building = { type = dockyard level = 1 }
-				}
-				transfer_navy = { target = FRA }
-				}
-		}
-		ai_will_do = { factor = 0 }
-	}
+	#1Экономическая_интеграция_Мексики = {
+	#	icon = generic_break_treaty
+	#	allowed = { tag = FRA }
+	#	visible = {
+	#		ENG = { is_ai = yes }
+	#	}
+	#	available = {
+	#		USA = { is_ai = yes }
+	#		WCA = { is_ai = yes }
+	#		NOT = { MEX = { is_in_faction_with = FRA }}
+	#		ENG = { is_ai = yes }
+	#		date > 1936.1.5
+	#	}
+	#	#cost = 100
+	#	fire_only_once = yes
+##
+	#	fire_only_once = yes
+	#	complete_effect = {
+	#		FRA = {
+	#			add_one_random_dockyard = yes
+	#			#add_political_power = 100
+	#			set_autonomy = {
+	#				target = MEX
+	#				autonomy_state = auto2
+	#			}
+	#		}
+	#		MEX = {
+	#			random_owned_controlled_state = {
+	#				limit = {
+	#					dockyard > 0
+	#				}
+	#				remove_building = { type = dockyard level = 1 }
+	#			}
+	#			transfer_navy = { target = FRA }
+	#			}
+	#	}
+	#	ai_will_do = { factor = 0 }
+	#}
 	
 	2Развитие_ВВС = {
 		icon = generic_break_treaty
@@ -509,48 +509,48 @@ foreign_politics = {
 		ai_will_do = { factor = 0 }
 	}
 	
-	2Экономическая_интеграция_Мексики = {
-		icon = generic_break_treaty
-		allowed = { tag = ENG }
-		visible = {
-			MEX = { is_ai = yes }
-		}
-		available = {
-			USA = { is_ai = yes }
-			WCA = { is_ai = yes }
-			MEX = { is_ai = yes }
-		}
-		#cost = 100
-		fire_only_once = yes
-
-		fire_only_once = yes
-		complete_effect = {
-			ENG = {
-				#add_political_power = 100
-				set_autonomy = {
-					target = MEX
-					autonomy_state = auto2
-				}
-			}
-			MEX = {
-				every_navy_leader = {
-						remove_all_country_leader_roles = yes #not needed in GER
-						remove_civilian_advisor_roles = yes #not needed in GER
-						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
-					set_nationality = ENG
-				}
-				every_army_leader = { 
-						demote_to_general = yes
-						remove_all_country_leader_roles = yes #not needed in GER
-						remove_civilian_advisor_roles = yes #not needed in GER
-						#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
-					set_nationality = ENG
-				}
-				transfer_navy = { target = ENG }
-				}
-		}
-		ai_will_do = { factor = 0 }
-	}
+	#2Экономическая_интеграция_Мексики = {
+	#	icon = generic_break_treaty
+	#	allowed = { tag = ENG }
+	#	visible = {
+	#		MEX = { is_ai = yes }
+	#	}
+	#	available = {
+	#		USA = { is_ai = yes }
+	#		WCA = { is_ai = yes }
+	#		MEX = { is_ai = yes }
+	#	}
+	#	#cost = 100
+	#	fire_only_once = yes
+#
+	#	fire_only_once = yes
+	#	complete_effect = {
+	#		ENG = {
+	#			#add_political_power = 100
+	#			set_autonomy = {
+	#				target = MEX
+	#				autonomy_state = auto2
+	#			}
+	#		}
+	#		MEX = {
+	#			every_navy_leader = {
+	#					remove_all_country_leader_roles = yes #not needed in GER
+	#					remove_civilian_advisor_roles = yes #not needed in GER
+	#					#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+	#				set_nationality = ENG
+	#			}
+	#			every_army_leader = { 
+	#					demote_to_general = yes
+	#					remove_all_country_leader_roles = yes #not needed in GER
+	#					remove_civilian_advisor_roles = yes #not needed in GER
+	#					#remove_military_advisor_roles = yes #lets the player choose which trait to use as MHC
+	#				set_nationality = ENG
+	#			}
+	#			transfer_navy = { target = ENG }
+	#			}
+	#	}
+	#	ai_will_do = { factor = 0 }
+	#}
 	
 	
 }
