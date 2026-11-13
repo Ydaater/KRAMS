@@ -1,0 +1,15 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				
+				# 1. Ваш бафф на производство (на 30 дней)
+				add_dynamic_modifier = {
+					modifier = startup_prod_efficiency_buff
+					days = 30
+				}
+			
+			}
+		}
+	}
+}
