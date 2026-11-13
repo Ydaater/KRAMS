@@ -93,3 +93,12 @@ NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_DIRECT_DISRUPTION_DAMAGE_FACTOR = 0.0
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_MAX_FACTOR = 0.0
 NDefines.NAir.SECONDARY_DAMAGE_STRAT = 0.2
 NDefines.NAir.SECONDARY_DAMAGE_LOGISTICS = 0.0
+
+-- Максимум верфей для обычных кораблей (эсминцы, легкие крейсера, подлодки). В ваниле: 10
+NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 20
+
+-- Максимум верфей для тяжелых капитальных кораблей (линкоры, авианосцы, тяжелые крейсера). В ваниле: 5
+NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10
+
+-- Максимум верфей для транспортных конвоев. В ваниле: 15
+NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 150
