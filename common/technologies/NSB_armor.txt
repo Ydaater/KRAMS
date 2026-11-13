@@ -37,6 +37,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_torsion_bar_suspension
+			tank_makeshift_armor
 			tank_riveted_armor
 			tank_gasoline_engine
 			tank_diesel_engine
