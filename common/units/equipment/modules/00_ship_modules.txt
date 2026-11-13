@@ -2302,7 +2302,7 @@ equipment_modules = {
 		gfx = ship_mine_layer
 		
 		add_stats = {
-			sub_attack = 8
+			lg_attack = 1
 			build_cost_ic = 90
 		}
 		multiply_stats = {
@@ -2316,7 +2316,7 @@ equipment_modules = {
 		gfx = ship_mine_layer_sub
 		
 		add_stats = {
-			torpedo_attack = 13
+			torpedo_attack = 15
 			build_cost_ic = 90
 			naval_speed = -0.02
 		}
@@ -2337,7 +2337,7 @@ equipment_modules = {
 		gfx = ship_mine_sweeper
 		
 		add_stats = {
-			sub_attack = 8
+			lg_attack = 1
 			build_cost_ic = 30
 		}
 
