@@ -2297,12 +2297,12 @@ equipment_modules = {
 
 	ship_mine_layer_1 = {
 		abbreviation = "scp"
-		category = ship_mine_layer
+		category = ship_airplane_launcher
 		gui_category = ship_mine_warfare
 		gfx = ship_mine_layer
 		
 		add_stats = {
-			lg_attack = 1
+			sub_attack = 8
 			build_cost_ic = 90
 		}
 		multiply_stats = {
@@ -2312,11 +2312,11 @@ equipment_modules = {
 
 	ship_mine_layer_sub = {
 		abbreviation = "scq"
-		category = ship_mine_layer_sub
+		category = ship_torpedo_sub
 		gfx = ship_mine_layer_sub
 		
 		add_stats = {
-			torpedo_attack = 15
+			torpedo_attack = 6
 			build_cost_ic = 90
 			naval_speed = -0.02
 		}
@@ -2333,11 +2333,11 @@ equipment_modules = {
 
 	ship_mine_sweeper_1 = {
 		abbreviation = "scr"
-		category = ship_mine_warfare
+		category = ship_airplane_launcher
 		gfx = ship_mine_sweeper
 		
 		add_stats = {
-			lg_attack = 1
+			sub_attack = 8
 			build_cost_ic = 30
 		}
 
