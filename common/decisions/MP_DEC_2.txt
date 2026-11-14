@@ -153,31 +153,51 @@ operations = {
 				add_political_power = -50
 			}
 			GER = {
-				country_event = krw.73
-				effect_tooltip = {
-					every_navy_leader = {
-						limit = { 
-							OR = {
-								NOT = { is_character = GER_max_bastian } 
-								NOT = { is_character = GER_willy_von_nordeck } 
-								NOT = { is_character = GER_hermann_boehm } 
-							}
-						}
-						hidden_effect = {
-							remove_all_country_leader_roles = yes 
-							remove_civilian_advisor_roles = yes
-						}
-						set_nationality = ROOT
+				# 1. Передаем всех действующих адмиралов (советники-адмиралы перейдут здесь)
+				every_navy_leader = {
+					hidden_effect = {
+						remove_all_country_leader_roles = yes 
+						remove_civilian_advisor_roles = yes 
 					}
-					transfer_navy = { target = ROOT }
-					custom_effect_tooltip = needs_approval
-					custom_effect_tooltip = if_they_refuse_tt
-					add_command_power = 50
-					add_political_power = 50
+					set_nationality = ROOT
 				}
+				
+				# 2. НОВЫЙ БЛОК: Ищем теоретиков и штабников, которые не командуют флотами
+				every_character = {
+					limit = {
+						is_navy_leader = no # Чтобы не дублировать передачу адмиралов
+						OR = {
+							has_trait = naval_theorist
+							has_trait = navy_chief_decisive_battle
+							has_trait = navy_chief_indirect_approach
+							has_trait = navy_chief_fleet_in_being
+							has_trait = navy_chief_maneuver_warfare
+							has_trait = high_command_naval_air_fleet
+							has_trait = high_command_fleet_logistics
+							has_trait = high_command_capital_ships
+							has_trait = high_command_screens
+							has_trait = high_command_submarines
+							# ВАЖНО: Если в вашем моде есть уникальные кастомные 
+							# трейты для морских советников, допишите их в этот список.
+						}
+					}
+					hidden_effect = {
+						remove_all_country_leader_roles = yes
+						remove_civilian_advisor_roles = yes
+					}
+					set_nationality = ROOT
+				}
+
+				# 3. Передаем физические корабли
+				transfer_navy = { target = ROOT }
+				
+				# 4. Выдаем компенсацию Германии
+				add_command_power = 50
+				add_political_power = 50
 			}
 		}
 	}
+	
 	GER_give_GEA_ceylon = {
 		icon = rubber
 		highlight_states = {
@@ -302,43 +322,5 @@ operations = {
 		}
 		ai_will_do = { factor = 0 }
 	}
-    Japan_join_Russia = {
-        icon = eng_trade_unions_support
-
-        allowed = {
-            original_tag = JAP
-        }
-
-        visible = {
-            NOT = { is_in_faction_with = RUS }
-        }
-
-        available = {
-            date > 1939.1.1
-        }
-
-        cost = 0
-
-        ai_will_do = {
-            factor = 0
-        }
-
-        complete_effect = {
-            hidden_effect = {
-                every_country = {
-                    limit = {
-                        is_in_faction_with = JAP
-                        NOT = { tag = JAP }
-                    }
-                    RUS = {
-                        add_to_faction = PREV
-                    }
-                }
-            }
-            RUS = {
-                add_to_faction = JAP
-            }
-        }
-    }
 }
 
