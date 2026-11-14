@@ -1456,7 +1456,8 @@ equipment_modules = {
 			breakthrough = 5
 		}
 		multiply_stats = {
-			hard_attack = 0.04
+			hard_attack = 0.1
+			soft_attack = 0.1
 		}
 		#xp_cost = 1
 
@@ -1517,6 +1518,7 @@ equipment_modules = {
 		#xp_cost = 1
 		multiply_stats = {
 			ap_attack = 0.1
+			hard_attack = 0.1
 		}
 
 		build_cost_resources = {
@@ -1566,8 +1568,9 @@ equipment_modules = {
 			defense = 4
 		}
 		multiply_stats = {
-			soft_attack = 0.02
-			air_attack = 0.02
+			soft_attack = 0.1
+			hard_attack = 0.1
+			air_attack = 0.1
 		}
 		#xp_cost = 1
 		
@@ -1610,7 +1613,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			fuel_capacity = 100
+			fuel_capacity = 2000
 			build_cost_ic = 1
 			maximum_speed = -0.25
 		}
