@@ -322,5 +322,43 @@ operations = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+    Japan_join_Russia = {
+        icon = eng_trade_unions_support
+
+        allowed = {
+            original_tag = JAP
+        }
+
+        visible = {
+            NOT = { is_in_faction_with = RUS }
+        }
+
+        available = {
+            date > 1939.1.1
+        }
+
+        cost = 0
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                every_country = {
+                    limit = {
+                        is_in_faction_with = JAP
+                        NOT = { tag = JAP }
+                    }
+                    RUS = {
+                        add_to_faction = PREV
+                    }
+                }
+            }
+            RUS = {
+                add_to_faction = JAP
+            }
+        }
+    }	
 }
 
