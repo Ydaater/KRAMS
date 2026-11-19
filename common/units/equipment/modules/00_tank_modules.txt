@@ -1501,10 +1501,10 @@ equipment_modules = {
 		add_stats = {
 			reliability = 0.15
 			build_cost_ic = 2
-			max_strength = 0.5
 		}
 		#xp_cost = 1
 		multiply_stats = {
+			max_strength = 0.5
 		}
 	}
 
