@@ -1,0 +1,15 @@
+krams_startup_annexation = {
+    name = RULE_KRAMS_STARTUP_ANNEXATION
+    group = RULE_KAISERREICH_MULTIPLAYER_RULES
+    icon = GFX_volunteers
+    default = {
+        name = DISABLED
+        text = RULE_OPTION_KRAMS_ANNEX_DISABLED
+        desc = RULE_KRAM_ANNEX_DISABLED_DESC
+    }
+    option = {
+        name = ENABLED
+        text = RULE_OPTION_KRAMS_ANNEX_ENABLED
+        desc = RULE_KRAMS_ANNEX_ENABLED_DESC
+    }
+}

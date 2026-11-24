@@ -1,0 +1,7 @@
+﻿l_english:
+ RULE_KRAMS_STARTUP_ANNEXATION:0 "KRAMS Startup Annexation"
+ RULE_KAISERREICH_MULTIPLAYER_RULES:0 "Kaiserreich multiplayer rules"
+ RULE_OPTION_KRAMS_ANNEX_DISABLED:0 "Disabled"
+ RULE_KRAMS_ANNEX_DISABLED_DESC:0 "Do not run the KRAMS startup annexation package."
+ RULE_OPTION_KRAMS_ANNEX_ENABLED:0 "Enabled"
+ RULE_KRAMS_ANNEX_ENABLED_DESC:0 "Apply the KRAMS startup annexations and associated effects when the game begins."
