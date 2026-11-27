@@ -194,8 +194,8 @@ ideas = {
 			picture = chi_hyper_inflation5
 			allowed = { always = no }
 			modifier = {
-				stability_factor = 0.2
-				production_factory_efficiency_gain_factor = 0.33
+				stability_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
 				production_factory_max_efficiency_factor = 0.20
 				production_speed_buildings_factor = 0.1
 			}
@@ -259,8 +259,11 @@ ideas = {
 			picture = generic_volunteer_expedition_bonus
 			allowed = { always = no }
 			modifier = {
+				army_attack_factor = 0.1
 				political_power_gain = 0.5
 				non_core_manpower = 0.2
+				compliance_gain = 0.2
+				
 			}
 		}
 
