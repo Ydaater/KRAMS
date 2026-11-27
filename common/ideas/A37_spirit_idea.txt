@@ -13,6 +13,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -40
 				production_factory_efficiency_gain_factor = -40
 				send_volunteer_size = -200
+				min_export = 0.50
 			}
 		}
 		
